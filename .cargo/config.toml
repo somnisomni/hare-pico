@@ -1,0 +1,12 @@
+[target.thumbv6m-none-eabi]
+# runner = "probe-rs run --chip RP2040"
+runner = "elf2uf2-rs -d -s"
+rustflags = [
+  "-C", "linker=flip-link"
+]
+
+[build]
+target = "thumbv6m-none-eabi"
+
+[env]
+DEFMT_LOG = "debug"
