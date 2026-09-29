@@ -466,6 +466,7 @@ checksum = "7bbd85cf5a5ae56bdf26f618364af642d1d0a4e245cdd75cd9aabda382f65a81"
 dependencies = [
  "cfg-if",
  "critical-section",
+ "defmt",
  "embedded-io-async 0.7.0",
  "futures-core",
  "futures-sink",
@@ -694,7 +695,7 @@ dependencies = [
 
 [[package]]
 name = "hare"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -702,8 +703,10 @@ dependencies = [
  "defmt-rtt",
  "embassy-executor",
  "embassy-rp",
+ "embassy-sync",
  "embassy-time",
- "panic-probe",
+ "heapless",
+ "panic-reset",
 ]
 
 [[package]]
@@ -925,13 +928,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 
 [[package]]
-name = "panic-probe"
-version = "1.0.0"
+name = "panic-reset"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd402d00b0fb94c5aee000029204a46884b1262e0c443f166d86d2c0747e1a1a"
+checksum = "6cf1ff2a5b1a478dd94572aa43476b6630e72071cbd016985003ad3903a3a4f5"
 dependencies = [
  "cortex-m",
- "defmt",
 ]
 
 [[package]]
